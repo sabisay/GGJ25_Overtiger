@@ -4,7 +4,7 @@ using UnityEngine;
 public class PlayerData
 {
     public int Health;
-    public int Stamina;
+    public int Bullet;
     public int Soap;
     public int Water;
 }
@@ -18,7 +18,7 @@ public class SaveLoadManager : MonoSingleton<SaveLoadManager>
     {
         playerData = new PlayerData();
         playerData.Health = PlayerHealthSystem.Instance.Health;
-        playerData.Stamina = PlayerHealthSystem.Instance.Stamina;
+        playerData.Bullet = PlayerHealthSystem.Instance.GunScript.Bullet;
         playerData.Soap = PlayerHealthSystem.Instance.Soap;
         playerData.Water = PlayerHealthSystem.Instance.Water;
 

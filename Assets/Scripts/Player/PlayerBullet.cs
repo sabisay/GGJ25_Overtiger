@@ -1,7 +1,7 @@
 using System.Collections;
 using UnityEngine;
 
-public class PlayerBullet : MonoBehaviour
+public class PlayerBullet : MonoSingleton<PlayerBullet>
 {
     public float speed = 15f;
     private Vector3 _movement;
@@ -10,7 +10,7 @@ public class PlayerBullet : MonoBehaviour
     {
         _movement = direction * Time.deltaTime * speed;
     }
-
+    
     private void Update()
     {
         transform.position += _movement;

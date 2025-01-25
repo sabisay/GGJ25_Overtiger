@@ -5,8 +5,10 @@ public class PlayerController : MonoBehaviour
 {
     public Rigidbody2D rb;
     public float MoveSpeed;
+    public Transform PlayerHeadPivot;
 
     public float FlyingSpeed;
+    public float FlyingBaloon;
 
     private Vector2 move_pos;
 
@@ -36,6 +38,13 @@ public class PlayerController : MonoBehaviour
         {
             // Debug.Log("uçuyorsun melih");
             rb.linearVelocityY += FlyingSpeed / 10;
+            PlayerHeadPivot.localScale = Vector3.Lerp(PlayerHeadPivot.localScale, new Vector3(1,1,1), FlyingBaloon * Time.timeScale);
         }
+        else
+            PlayerHeadPivot.localScale = 
+                Vector3.Lerp(
+                    PlayerHeadPivot.localScale, 
+                    new Vector3(.3f,.3f,.3f), 
+                    FlyingBaloon * Time.timeScale);
     }
 }

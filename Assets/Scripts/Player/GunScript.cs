@@ -6,7 +6,7 @@ using static UnityEditor.Progress;
 public class GunScript : MonoBehaviour
 {
     public InputActionReference shoot;
-    public PlayerBullet Bullet;
+    public int Bullet = 0;
     private Transform aimTransform;
     private Vector3 aimDirection;
 
@@ -21,10 +21,23 @@ public class GunScript : MonoBehaviour
 
     private void Shoot(InputAction.CallbackContext context)
     {
-        PoolManager.Instance.Dimension(aimDirection);
-        PoolManager.Instance.GetAvailableBullet(transform);
+        ShootControl();
     }
 
+    private void ShootControl()
+    {
+        if (Bullet > 0)
+        {
+            Bullet -= 1;
+            PoolManager.Instance.Dimension(aimDirection);
+            PoolManager.Instance.GetAvailableBullet(transform);
+        }
+    }
+    public void AddBullet(int bulletCount)
+    {
+        Bullet += bulletCount;
+
+    }
     private void Awake()
     {
         aimTransform = transform.Find("Aim");
@@ -33,7 +46,7 @@ public class GunScript : MonoBehaviour
     private void Update()
     {
         Vector3 mousePosition = UtilsClass.GetMouseWorldPosition();
-
+        
         aimDirection = (mousePosition - transform.position).normalized;
         float angle = Mathf.Atan2(aimDirection.y, aimDirection.x) * Mathf.Rad2Deg;
         aimTransform.eulerAngles = new Vector3 (0, 0, angle);
