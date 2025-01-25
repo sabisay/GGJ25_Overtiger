@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4230055259173174076}
   - component: {fileID: 6655799219931933065}
   - component: {fileID: 8292352551852510259}
+  - component: {fileID: 7334907039621959830}
   m_Layer: 0
   m_Name: "kakt\xFCs_0 (2)"
   m_TagString: Untagged
@@ -134,6 +135,18 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 4.6, y: 7.6}
   m_EdgeRadius: 0
+--- !u!114 &7334907039621959830
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 729371047101332305}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 432d9d0803ddd3a4d9a720939404a28f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1261907193539567132
 GameObject:
   m_ObjectHideFlags: 0
@@ -145,6 +158,7 @@ GameObject:
   - component: {fileID: 8927483670400983755}
   - component: {fileID: 4097599847235088160}
   - component: {fileID: 235818851532881639}
+  - component: {fileID: 6716762521029293941}
   m_Layer: 0
   m_Name: "kakt\xFCs_0"
   m_TagString: Untagged
@@ -268,6 +282,18 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 4.6, y: 7.6}
   m_EdgeRadius: 0
+--- !u!114 &6716762521029293941
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1261907193539567132}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 432d9d0803ddd3a4d9a720939404a28f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2358554258664153125
 GameObject:
   m_ObjectHideFlags: 0
@@ -279,6 +305,7 @@ GameObject:
   - component: {fileID: 8266725575769771500}
   - component: {fileID: 5584973774245177811}
   - component: {fileID: 2141694549832136238}
+  - component: {fileID: 854302329995217676}
   m_Layer: 0
   m_Name: "kakt\xFCs_0 (3)"
   m_TagString: Untagged
@@ -402,6 +429,18 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 4.6, y: 7.6}
   m_EdgeRadius: 0
+--- !u!114 &854302329995217676
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2358554258664153125}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 432d9d0803ddd3a4d9a720939404a28f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2933645943734943784
 GameObject:
   m_ObjectHideFlags: 0
@@ -413,6 +452,7 @@ GameObject:
   - component: {fileID: 8656317946592125098}
   - component: {fileID: 3954168834345145966}
   - component: {fileID: 2456823617635562441}
+  - component: {fileID: 7717893322724637129}
   m_Layer: 0
   m_Name: "kakt\xFCs_0 (1)"
   m_TagString: Untagged
@@ -536,6 +576,18 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 4.6, y: 7.6}
   m_EdgeRadius: 0
+--- !u!114 &7717893322724637129
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2933645943734943784}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 432d9d0803ddd3a4d9a720939404a28f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7126428472460126750
 GameObject:
   m_ObjectHideFlags: 0
