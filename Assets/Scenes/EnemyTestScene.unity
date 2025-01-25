@@ -827,7 +827,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28e50c058ca529940b71eb0b5464d8d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: {fileID: 1655394298}
+  bullet: {fileID: 1655394302}
 --- !u!1 &1655394298
 GameObject:
   m_ObjectHideFlags: 0
@@ -976,7 +976,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
-  waitSeconds: 2
+  waitSeconds: 1
   initialPos: {fileID: 938257443}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

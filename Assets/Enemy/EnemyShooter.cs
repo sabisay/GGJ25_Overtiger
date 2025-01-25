@@ -3,13 +3,15 @@ using UnityEngine;
 
 public class EnemyShooter : MonoBehaviour
 {
-    public GameObject bullet;
+    public Bullet bullet;
 
     private Raycastting _raycasting;
+    private Transform _rayOriginTransform;
 
     // Update is called once per frame
     private void Start()
     {
+        _rayOriginTransform = transform.GetChild(0);
         _raycasting = FindFirstObjectByType<Raycastting>();
     }
     void Update()
@@ -25,6 +27,8 @@ public class EnemyShooter : MonoBehaviour
 
     void Shoot()
     {
-        bullet.SetActive(true);
+        Vector3 direction = _raycasting.HittedObject.transform.position - _rayOriginTransform.position;
+        bullet.SetDirection(direction);
+        bullet.gameObject.SetActive(true);
     }
 }

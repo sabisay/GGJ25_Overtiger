@@ -6,28 +6,26 @@ public class Bullet : MonoBehaviour
     public float speed = 2f;
     public int waitSeconds = 2;
     public Transform initialPos;
+    
+    private Vector3 _moveDirection;
 
-    private Raycastting _raycastting;
-
-    private void Start()
-    {
-        _raycastting = FindFirstObjectByType<Raycastting>();
-        // initialPos = transform; // Baþlangýç pozisyonunu kaydediyoruz
-    }
     private void OnEnable()
     {
-        StartCoroutine(BulletDeactivated());
+        StartCoroutine(BulletDeactivated(waitSeconds));
+    }
+
+    public void SetDirection(Vector3 direction)
+    {
+        _moveDirection = direction;
     }
 
     void Update()
     {
+        transform.position += speed * Time.deltaTime * _moveDirection;
 
-        Transform _targetObject = _raycastting.HittedObject.transform;
-        transform.position = Vector2.MoveTowards(transform.position, _targetObject.position, speed * Time.deltaTime);
-        
     }
 
-    IEnumerator BulletDeactivated()
+    IEnumerator BulletDeactivated(float waitSeconds)
     {
         yield return new WaitForSeconds(waitSeconds);
         transform.position = initialPos.position;
