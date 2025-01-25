@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 0166c1fb2811c5a4da16d77008baee35
+guid: e38306831d9cf1f4e921d1db25516b16
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2493091262142648571
-    second: "kakt\xFCs_0"
+      213: 7488553751224224765
+    second: grassSized_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -139,13 +139,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "kakt\xFCs_0"
+      name: grassSized_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 460
-        height: 760
+        width: 1250
+        height: 188
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -154,8 +154,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 50f6b5fb4b2c66dd0800000000000000
-      internalID: -2493091262142648571
+      spriteID: dfb832fe5fface760800000000000000
+      internalID: 7488553751224224765
       vertices: []
       indices: 
       edges: []
@@ -173,8 +173,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      "kakt\xFCs_0": -2493091262142648571
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
