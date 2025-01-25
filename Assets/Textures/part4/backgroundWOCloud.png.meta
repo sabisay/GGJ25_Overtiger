@@ -173,7 +173,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      backgroundWOCloud_0: -9054871834702602046
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
