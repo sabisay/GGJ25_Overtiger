@@ -12,7 +12,7 @@ public class EnemyShooter : MonoBehaviour
     private void Start()
     {
         _rayOriginTransform = transform.GetChild(0);
-        _raycasting = FindFirstObjectByType<Raycastting>();
+        _raycasting = GetComponent<Raycastting>();
     }
     void Update()
     {
