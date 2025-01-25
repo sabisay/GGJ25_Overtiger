@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: b091474181acbfa47b00117aa818444e
+guid: 9b70edf4bdcd1074fb394f60e2c405af
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6653974484282690300
-    second: Paragraf metniniz (2)_0
+      213: -4773715145733234218
+    second: "BalonKafas\u0131_0"
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -139,13 +139,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Paragraf metniniz (2)_0
+      name: "BalonKafas\u0131_0"
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 500
-        height: 500
+        width: 260
+        height: 320
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -154,8 +154,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 40531d7f57558a3a0800000000000000
-      internalID: -6653974484282690300
+      spriteID: 6d12baffd5b50cdb0800000000000000
+      internalID: -4773715145733234218
       vertices: []
       indices: 
       edges: []
@@ -173,8 +173,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      Paragraf metniniz (2)_0: -6653974484282690300
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: b091474181acbfa47b00117aa818444e
+guid: bf9ed4e55cd710f40bd53b1119b8ca0f
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6653974484282690300
-    second: Paragraf metniniz (2)_0
+      213: 4483504832982471387
+    second: pixil-frame-0 (1)_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -139,13 +139,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Paragraf metniniz (2)_0
+      name: pixil-frame-0 (1)_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 500
-        height: 500
+        width: 100
+        height: 100
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -154,8 +154,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 40531d7f57558a3a0800000000000000
-      internalID: -6653974484282690300
+      spriteID: bd2daa614eb983e30800000000000000
+      internalID: 4483504832982471387
       vertices: []
       indices: 
       edges: []
@@ -174,7 +174,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Paragraf metniniz (2)_0: -6653974484282690300
+      pixil-frame-0 (1)_0: 4483504832982471387
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

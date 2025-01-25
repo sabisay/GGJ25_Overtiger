@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: b091474181acbfa47b00117aa818444e
+guid: 0166c1fb2811c5a4da16d77008baee35
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6653974484282690300
-    second: Paragraf metniniz (2)_0
+      213: -2493091262142648571
+    second: "kakt\xFCs_0"
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -139,13 +139,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Paragraf metniniz (2)_0
+      name: "kakt\xFCs_0"
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 500
-        height: 500
+        width: 460
+        height: 760
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -154,8 +154,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 40531d7f57558a3a0800000000000000
-      internalID: -6653974484282690300
+      spriteID: 50f6b5fb4b2c66dd0800000000000000
+      internalID: -2493091262142648571
       vertices: []
       indices: 
       edges: []
@@ -173,8 +173,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      Paragraf metniniz (2)_0: -6653974484282690300
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
