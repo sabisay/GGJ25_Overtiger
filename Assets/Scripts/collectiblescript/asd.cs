@@ -3,8 +3,9 @@ using UnityEngine;
 public class Collectible : MonoBehaviour
 {
     // Ses efekti için (isteðe baðlý)
-   
 
+    private int soapCount = 0;
+    private int waterCount = 0;
     void Start()
     {
         // Gerekli baþlangýç ayarlarýný burada yapabilirsiniz
@@ -23,7 +24,7 @@ public class Collectible : MonoBehaviour
         // Oyuncu etiketi kontrolü
         if (other.CompareTag("sabun"))
         {
-            
+            soapCount++;
 
             // Ýsteðe baðlý: Skor artýrma
             // Skor sistemi varsa buradan güncelleyebilirsiniz.
@@ -34,6 +35,7 @@ public class Collectible : MonoBehaviour
         }
         if (other.CompareTag("su"))
         {
+            waterCount++;
             Destroy(gameObject);
         }
     }
