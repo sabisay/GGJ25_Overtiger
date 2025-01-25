@@ -1,9 +1,11 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class UIManager : MonoSingleton<UIManager>
 {
+    public GameObject DeadPanel;
     public Slider HealthBar;
     public TMP_Text SoapText;
     public TMP_Text WaterText;
@@ -16,5 +18,19 @@ public class UIManager : MonoSingleton<UIManager>
         SoapText.text = Soap.ToString();
         WaterText.text = Water.ToString();
         BulletText.text = Bullet.ToString();
+    }
+
+    public void OpenDeadScreen()
+    {
+        DeadPanel.SetActive(true);
+    }
+
+    public void RestartScene()
+    {
+        LevelManager.Instance.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+    public void QuitGame()
+    {
+        Application.Quit();
     }
 }

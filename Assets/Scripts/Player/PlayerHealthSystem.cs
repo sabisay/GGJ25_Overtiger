@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class PlayerHealthSystem : MonoSingleton<PlayerHealthSystem>
@@ -9,21 +10,22 @@ public class PlayerHealthSystem : MonoSingleton<PlayerHealthSystem>
     public int BulletCount = 5;
 
     public GunScript GunScript;
+    private PlayerController playerController;
 
     private void Start()
     {
         UIManager.Instance.RefreshUI(Health, Soap, Water, GunScript.Bullet);
+        playerController = GetComponent<PlayerController>();
     }
     public void DecreaseHealth(int health)
     {
-        if (health > 0) 
+        if (Health > 0) 
         {
             Health -= health;
         }
-        if (Health <= 0) 
+        if (Health <= 0)
         {
-            Debug.Log("dead");
-            Debug.Log("Open dead screen");
+            StartCoroutine(Dead());
         }
         UIManager.Instance.RefreshUI(Health, Soap, Water, GunScript.Bullet);
     }
@@ -44,12 +46,20 @@ public class PlayerHealthSystem : MonoSingleton<PlayerHealthSystem>
 
     private void GetStamina()
     {
-        if (Soap >= 1 && Water >= 1 && GunScript.Bullet == 0)
+        if (Soap >= 1 && Water >= 1)
         {
             Soap -= 1;
             Water -= 1;
             GunScript.AddBullet(BulletCount);
         }
         UIManager.Instance.RefreshUI(Health, Soap, Water, GunScript.Bullet);
+    }
+
+    IEnumerator Dead()
+    {
+        //playerController.animator
+        yield return new WaitForSeconds(0.1f);
+        UIManager.Instance.OpenDeadScreen();
+        Time.timeScale = 0.0f;
     }
 }

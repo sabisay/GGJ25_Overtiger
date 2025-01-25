@@ -9,6 +9,7 @@ TagManager:
   - Ground
   - su
   - Player1
+  - Deadzone
   layers:
   - Default
   - TransparentFX
