@@ -16,7 +16,10 @@ public class PlayerHealthSystem : MonoSingleton<PlayerHealthSystem>
     }
     public void DecreaseHealth(int health)
     {
-        Health -= health;
+        if (health > 0) 
+        {
+            Health -= health;
+        }
         if (Health <= 0) 
         {
             Debug.Log("dead");

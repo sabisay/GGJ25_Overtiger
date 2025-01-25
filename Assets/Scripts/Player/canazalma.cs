@@ -7,9 +7,8 @@ public class canazalma : MonoBehaviour
         // Oyuncu ile çarpýþmayý kontrol et
         if (collision.gameObject.CompareTag("Player")) // "Player" tag'ine sahip bir nesneyle çarpýþma
         {
-            PlayerHealthSystem.Instance.DecreaseHealth(1); // 1 can azaltýlýr
+            PlayerHealthSystem.Instance.DecreaseHealth(25); // 25 can azaltýlýr
             Debug.Log("Kalan Can: " + PlayerHealthSystem.Instance.Health);
-
         }
     }
 }

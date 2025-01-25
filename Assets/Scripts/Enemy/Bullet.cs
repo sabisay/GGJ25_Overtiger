@@ -22,7 +22,6 @@ public class Bullet : MonoBehaviour
     void Update()
     {
         transform.position += speed * Time.deltaTime * _moveDirection;
-
     }
 
     IEnumerator BulletDeactivated(float waitSeconds)
@@ -30,5 +29,15 @@ public class Bullet : MonoBehaviour
         yield return new WaitForSeconds(waitSeconds);
         transform.position = initialPos.position;
         this.gameObject.SetActive(false);
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        // Oyuncu ile çarpýþmayý kontrol et
+        if (collision.gameObject.CompareTag("Player")) // "Player" tag'ine sahip bir nesneyle çarpýþma
+        {
+            PlayerHealthSystem.Instance.DecreaseHealth(25); // 1 can azaltýlýr
+            Debug.Log("Kalan Can: " + PlayerHealthSystem.Instance.Health);
+
+        }
     }
 }
