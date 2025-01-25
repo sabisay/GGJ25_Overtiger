@@ -6,7 +6,7 @@ using static UnityEditor.Progress;
 public class GunScript : MonoBehaviour
 {
     public InputActionReference shoot;
-    public Bullet Bullet;
+    public PlayerBullet Bullet;
     private Transform aimTransform;
     private Vector3 aimDirection;
 
@@ -23,26 +23,6 @@ public class GunScript : MonoBehaviour
     {
         PoolManager.Instance.Dimension(aimDirection);
         PoolManager.Instance.GetAvailableBullet(transform);
-
-        // PoolManager.Instance.GetAvailableBullet(transform);
-        //Debug.Log("sa");
-        /*
-         var bullet = PoolManager.Instance.GetAvailableBullet(transform);
-        if (bullet != null)
-            bullet.Fire(aimDirection);
-        else
-            Debug.Log("Mermi boþ");
-        foreach (var item in PoolManager.Instance.Bullets)
-        {
-            if (!item.gameObject.activeInHierarchy)
-            {
-                item.transform.position = transform.position;
-                item.gameObject.SetActive(true);
-                item.Fire(aimDirection);
-                break;
-            }
-        }
-        */
     }
 
     private void Awake()

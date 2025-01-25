@@ -499,7 +499,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 449640080}
   MoveSpeed: 0.2
-  FlyingSpeed: 0
+  FlyingSpeed: 3
   move: {fileID: 7380858043057047578, guid: c87899cc971caa24db43482014a37977, type: 3}
   fly: {fileID: -851439947973314159, guid: c87899cc971caa24db43482014a37977, type: 3}
 --- !u!50 &449640080
@@ -1826,7 +1826,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2066278566}
-  - component: {fileID: 2066278565}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -1834,18 +1833,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &2066278565
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2066278564}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c730b8cf7d3f7c64c9e9d64fe0ebdcde, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &2066278566
 Transform:
   m_ObjectHideFlags: 0

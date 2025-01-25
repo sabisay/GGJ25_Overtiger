@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class PoolManager : MonoSingleton<PoolManager>
 {
-    public List<Bullet> Bullets;
+    public List<PlayerBullet> Bullets;
 
     private Vector3 aimDirection;
     
     public void GetAvailableBullet(Transform objectTransform)
     {
-        foreach (Bullet item in Bullets)
+        foreach (PlayerBullet item in Bullets)
         {
             if (!item.gameObject.activeInHierarchy)
             {
