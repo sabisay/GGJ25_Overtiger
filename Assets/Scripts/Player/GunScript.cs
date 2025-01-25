@@ -1,7 +1,6 @@
 using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using static UnityEditor.Progress;
 
 public class GunScript : MonoBehaviour
 {
@@ -36,7 +35,6 @@ public class GunScript : MonoBehaviour
     public void AddBullet(int bulletCount)
     {
         Bullet += bulletCount;
-
     }
     private void Awake()
     {
@@ -51,6 +49,4 @@ public class GunScript : MonoBehaviour
         float angle = Mathf.Atan2(aimDirection.y, aimDirection.x) * Mathf.Rad2Deg;
         aimTransform.eulerAngles = new Vector3 (0, 0, angle);
     }
-
-
 }
