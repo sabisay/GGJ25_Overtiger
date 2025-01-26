@@ -21,21 +21,19 @@ public class CanvasManager : MonoBehaviour
 
         // Ses butonuna týklama olayýný ekle
         soundButton.onClick.AddListener(ToggleSound);
-        Time.timeScale = 0;
     }
 
     public void ShowStartCanvas()
     {
         startCanvas.SetActive(true);
         GamePanel.SetActive(false);
-        Time.timeScale = 0;
     }
 
     public void ShowGameCanvas()
     {
         startCanvas.SetActive(false);
         GamePanel.SetActive(true);
-        Time.timeScale = 1;
+        PlayerController.Instance.gameObject.SetActive(true);
     }
 
     public void ToggleSettingsPanel(GameObject settingsPanel)
@@ -60,9 +58,5 @@ public class CanvasManager : MonoBehaviour
 
         // Butonun sprite'ýný güncelle
         soundButton.image.sprite = isSoundOn ? soundOnSprite : soundOffSprite;
-    }
-    private IEnumerator CloseAfterDelay()
-    {
-        yield return new WaitForSeconds(2);
     }
 }

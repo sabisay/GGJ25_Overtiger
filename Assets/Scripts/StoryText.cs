@@ -13,6 +13,7 @@ public class StoryText : MonoBehaviour
 
     void Start()
     {
+        PlayerController.Instance.gameObject.SetActive(false);
         menuCanvas.SetActive(false);
         if (Stories.Count > 0)
         {
