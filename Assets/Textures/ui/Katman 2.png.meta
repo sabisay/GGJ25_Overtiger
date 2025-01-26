@@ -173,7 +173,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Katman 2_0: -7504945459825249036
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
