@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class LevelManager : MonoSingleton<LevelManager>
 {
     public GameObject LoadingScreen;
-    public Image LoadingBarFill;
+    public Slider LoadingBar;
     public void LoadScene(int levelIndex)
     {
         SaveLoadManager.Instance.LoadGame();
@@ -23,7 +23,7 @@ public class LevelManager : MonoSingleton<LevelManager>
         {
             float progressValue = Mathf.Clamp01(operation.progress / 0.9f);
 
-            LoadingBarFill.fillAmount = progressValue;
+            LoadingBar.value = progressValue;
             yield return null;
         }
     }
