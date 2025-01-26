@@ -33,7 +33,7 @@ public class CanvasManager : MonoBehaviour
     {
         startCanvas.SetActive(false);
         GamePanel.SetActive(true);
-        PlayerController.Instance.gameObject.SetActive(true);
+        PlayerController.Instance.enabled = true;
     }
 
     public void ToggleSettingsPanel(GameObject settingsPanel)

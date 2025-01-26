@@ -43,7 +43,7 @@ public class BouncingObject : MonoBehaviour
         if (collision.collider.CompareTag("Player"))
         {
             Debug.Log("Bouncing object hit the player!");
-            // Oyuncuya hasar verme kodu buraya eklenebilir
+            PlayerHealthSystem.Instance.DecreaseHealth(25);
             Destroy(gameObject);
         }
     }
