@@ -1,35 +1,36 @@
+using System.Collections;
 using UnityEngine;
 
-public enum BossState
-{
-    Idle,
-    Attack1,
-    Attack2,
-    Rest
-}
 public class BossController : MonoBehaviour
 {
+    public enum BossState
+    {
+        Idle,
+        Attack1, // Hareketli Platformlar
+        Attack2, // Ateş Topları
+        Attack3, // Zıplayan Objeler
+        Rest
+    }
+
     public BossState currentState = BossState.Idle;
     public Transform player;
-    public float attack1Speed = 10f;
-    public int attack1Count = 3;
-    public float attack2ProjectileSpeed = 5f;
-    public float attack2FollowDuration = 2f;
-    public GameObject projectilePrefab;
-    public float restDuration = 3f;
+    public GameObject platformPrefab;
+    public GameObject fireballPrefab;
+    public GameObject bouncingObjectPrefab;
+    public float restDuration = 4f;
+    public float attackDuration = 3f;
 
-    private int attack1Counter = 0;
+    public Transform[] SpawnPointsForMovingPlatform;
+    public Transform[] SpawnPointsFireball;
+    public Transform[] SpawnPointsForBouncing;
+
+    public float movingPlatformSpeed = 4f;
+    public float fireballSpeed = 4f;
+    public float bouncingSpeed = 4f;
+
     private float restTimer = 0f;
-    private Vector3 initialPosition;
-
-    void Start()
-    {
-        if (player == null)
-        {
-            player = FindFirstObjectByType<PlayerController>().transform;
-        }
-        initialPosition = transform.position;
-    }
+    private float attackTimer = 0f;
+    private int attackIndex = 0;
 
     void Update()
     {
@@ -44,6 +45,9 @@ public class BossController : MonoBehaviour
             case BossState.Attack2:
                 Attack2State();
                 break;
+            case BossState.Attack3:
+                Attack3State();
+                break;
             case BossState.Rest:
                 RestState();
                 break;
@@ -52,47 +56,60 @@ public class BossController : MonoBehaviour
 
     void IdleState()
     {
-        // Karakterin konumunu belirle ve sald�r�ya ge�
+        // Saldırıya geç
         if (player != null)
         {
-            currentState = BossState.Attack1;
+            currentState = (BossState)(attackIndex + 1); // Sıradaki saldırıyı başlat
+            attackTimer = 0f;
         }
     }
 
     void Attack1State()
     {
-        if (attack1Counter < attack1Count)
+        // Hareketli platformlar oluştur
+        if (attackTimer == 0f)
         {
-            Vector3 direction = (player.position - transform.position).normalized;
-            transform.position += direction * attack1Speed * Time.deltaTime;
-
-            if (Vector3.Distance(transform.position, player.position) < 0.5f)
-            {
-                // Karaktere �arpt�, can azalt
-                Debug.Log("Boss hit the player!");
-                attack1Counter++;
-                transform.position = initialPosition; // Ba�lang�� pozisyonuna d�n
-            }
+            SpawnMovingPlatforms();
         }
-        else
+
+        attackTimer += Time.deltaTime;
+        if (attackTimer >= attackDuration)
         {
-            attack1Counter = 0;
-            currentState = BossState.Attack2;
+            currentState = BossState.Rest;
+            attackIndex = (attackIndex + 1) % 4; // Sıradaki saldırıyı ayarla
         }
     }
 
     void Attack2State()
     {
-        // 6 adet obje olu�tur ve karaktere do�ru g�nder
-        for (int i = 0; i < 6; i++)
+        // Ateş topları oluştur
+        if (attackTimer == 0f)
         {
-            GameObject projectile = Instantiate(projectilePrefab, transform.position, Quaternion.identity);
-            Vector3 direction = (player.position - transform.position).normalized;
-            projectile.GetComponent<Rigidbody2D>().linearVelocity = direction * attack2ProjectileSpeed;
+            SpawnFireballs();
         }
 
-        currentState = BossState.Rest;
-        restTimer = 0f;
+        attackTimer += Time.deltaTime;
+        if (attackTimer >= attackDuration)
+        {
+            currentState = BossState.Rest;
+            attackIndex = (attackIndex + 1) % 4; // Sıradaki saldırıyı ayarla
+        }
+    }
+
+    void Attack3State()
+    {
+        // Zıplayan objeler fırlat
+        if (attackTimer == 0f)
+        {
+            SpawnBouncingObjects();
+        }
+
+        attackTimer += Time.deltaTime;
+        if (attackTimer >= attackDuration)
+        {
+            currentState = BossState.Rest;
+            attackIndex = (attackIndex + 1) % 4; // Sıradaki saldırıyı ayarla
+        }
     }
 
     void RestState()
@@ -100,7 +117,129 @@ public class BossController : MonoBehaviour
         restTimer += Time.deltaTime;
         if (restTimer >= restDuration)
         {
+            restTimer = 0f;
             currentState = BossState.Idle;
         }
+    }
+
+    void SpawnMovingPlatforms()
+    {
+        
+
+
+    }
+
+    IEnumerator WaitForOther()
+    {
+        Transform randomTransform = FindRandomObjectFromArray(1, SpawnPointsForMovingPlatform);
+        StartCoroutine(SpawnMovingPlatformWithVelocity(randomTransform));
+        yield return new WaitForSeconds(2f);
+
+        Transform randomTransform2 = FindRandomObjectFromArray(1, SpawnPointsForMovingPlatform);
+        while (randomTransform == randomTransform2)
+        {
+            randomTransform2 = FindRandomObjectFromArray(1, SpawnPointsForMovingPlatform);
+        }
+        StartCoroutine(SpawnMovingPlatformWithVelocity(randomTransform));
+        yield return new WaitForSeconds(2f);
+
+        Transform randomTransform3 = FindRandomObjectFromArray(1, SpawnPointsForMovingPlatform);
+        while (randomTransform == randomTransform2 || randomTransform == randomTransform3
+            || randomTransform2 == randomTransform3)
+        {
+            randomTransform3 = FindRandomObjectFromArray(1, SpawnPointsForMovingPlatform);
+        }
+        StartCoroutine(SpawnMovingPlatformWithVelocity(randomTransform));
+        yield return new WaitForSeconds(2f);
+    }
+    IEnumerator WaitForOther2()
+    {
+        Transform randomTransform = FindRandomObjectFromArray(1, SpawnPointsFireball);
+        StartCoroutine(SpawnFireball(randomTransform));
+        yield return new WaitForSeconds(2f);
+
+        Transform randomTransform2 = FindRandomObjectFromArray(1, SpawnPointsFireball);
+        while (randomTransform == randomTransform2)
+        {
+            randomTransform2 = FindRandomObjectFromArray(1, SpawnPointsFireball);
+        }
+        StartCoroutine(SpawnFireball(randomTransform));
+        yield return new WaitForSeconds(2f);
+
+        Transform randomTransform3 = FindRandomObjectFromArray(1, SpawnPointsFireball);
+        while (randomTransform == randomTransform2 || randomTransform == randomTransform3
+            || randomTransform2 == randomTransform3)
+        {
+            randomTransform3 = FindRandomObjectFromArray(1, SpawnPointsFireball);
+        }
+        StartCoroutine(SpawnFireball(randomTransform));
+        yield return new WaitForSeconds(2f);
+    }
+
+    IEnumerator WaitForOther3()
+    {
+        Transform randomTransform = FindRandomObjectFromArray(1, SpawnPointsFireball);
+        StartCoroutine(SpawnBouncingObject(randomTransform));
+        yield return new WaitForSeconds(2f);
+
+        Transform randomTransform2 = FindRandomObjectFromArray(1, SpawnPointsFireball);
+        while (randomTransform == randomTransform2)
+        {
+            randomTransform2 = FindRandomObjectFromArray(1, SpawnPointsFireball);
+        }
+        StartCoroutine(SpawnBouncingObject(randomTransform));
+        yield return new WaitForSeconds(2f);
+
+        Transform randomTransform3 = FindRandomObjectFromArray(1, SpawnPointsFireball);
+        while (randomTransform == randomTransform2 || randomTransform == randomTransform3
+            || randomTransform2 == randomTransform3)
+        {
+            randomTransform3 = FindRandomObjectFromArray(1, SpawnPointsFireball);
+        }
+        StartCoroutine(SpawnBouncingObject(randomTransform));
+        yield return new WaitForSeconds(2f);
+    }
+
+    IEnumerator SpawnMovingPlatformWithVelocity(Transform spawnTransform)
+    {
+        yield return new WaitForSeconds(0.5f);
+        GameObject gameObject = Instantiate(platformPrefab, spawnTransform.position, Quaternion.identity);
+        yield return new WaitForSeconds(2);
+        gameObject.GetComponent<Rigidbody2D>().linearVelocityY = -3f * Time.deltaTime * movingPlatformSpeed;
+    }
+
+    Transform FindRandomObjectFromArray(int count,Transform[] transform) 
+    {
+        for (int i = 0; i < count; i++)
+        {
+            Transform t = transform[Random.Range(0,transform.Length)];
+            return t;
+        }
+        return default(Transform);
+    }
+
+    void SpawnFireballs()
+    {
+        StartCoroutine(WaitForOther2());
+    }
+    IEnumerator SpawnFireball(Transform spawnTransform)
+    {
+        yield return new WaitForSeconds(0.5f);
+        GameObject gameObject = Instantiate(fireballPrefab, spawnTransform.position, Quaternion.identity);
+        Vector3 direction = player.transform.position - gameObject.transform.position;
+        gameObject.GetComponent<Bullet>().SetDirection(direction);
+        gameObject.GetComponent<Bullet>().SetInitialPosition(gameObject.transform);
+        yield return new WaitForSeconds(2);
+        gameObject.GetComponent<Rigidbody2D>().linearVelocity = new Vector2();
+    }
+
+    void SpawnBouncingObjects()
+    {
+        StartCoroutine (WaitForOther2());
+    }
+    IEnumerator SpawnBouncingObject(Transform spawnTransform)
+    {
+        yield return new WaitForSeconds(0.5f);
+        GameObject gameObject = Instantiate(bouncingObjectPrefab, spawnTransform.position, Quaternion.identity);
     }
 }
