@@ -19,6 +19,11 @@ public class PlayerHealthSystem : MonoSingleton<PlayerHealthSystem>
         UIManager.Instance.RefreshUI(Health, Soap, Water, GunScript.Bullet);
         playerController = GetComponent<PlayerController>();
     }
+
+    public void RefreshUIforBullet()
+    {
+        UIManager.Instance.RefreshUI(Health, Soap, Water, GunScript.Bullet);
+    }
     public void DecreaseHealth(int health)
     {
         if (Health > 0) 

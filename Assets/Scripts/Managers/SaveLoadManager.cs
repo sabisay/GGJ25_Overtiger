@@ -27,6 +27,11 @@ public class SaveLoadManager : MonoSingleton<SaveLoadManager>
 
     public void SaveGame()
     {
+        playerData.Health = PlayerHealthSystem.Instance.Health;
+        playerData.Bullet = PlayerHealthSystem.Instance.GunScript.Bullet;
+        playerData.Soap = PlayerHealthSystem.Instance.Soap;
+        playerData.Water = PlayerHealthSystem.Instance.Water;
+
         string savePlayerData = JsonUtility.ToJson(playerData);
         File.WriteAllText(saveFilePath, savePlayerData);
     }

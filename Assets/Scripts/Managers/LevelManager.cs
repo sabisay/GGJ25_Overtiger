@@ -11,10 +11,10 @@ public class LevelManager : MonoSingleton<LevelManager>
     private void Start()
     {
         LoadingScreen = UIManager.Instance.LoadingScreen;
+        LoadingBar = UIManager.Instance.LoadingBar;
     }
     public void LoadScene(int levelIndex)
     {
-        SaveLoadManager.Instance.LoadGame();
         StartCoroutine(LoadSceneAsync(levelIndex));
     }
 
