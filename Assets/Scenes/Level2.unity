@@ -129217,6 +129217,7 @@ GameObject:
   - component: {fileID: 805513914}
   - component: {fileID: 805513913}
   - component: {fileID: 805513912}
+  - component: {fileID: 805513915}
   m_Layer: 0
   m_Name: pixil-frame-0 (8)_0
   m_TagString: Untagged
@@ -129340,6 +129341,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
+--- !u!114 &805513915
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 805513911}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6815edcb4be83454c947fc39d386cdc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &836541949
 GameObject:
   m_ObjectHideFlags: 0
@@ -130710,6 +130723,14 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3660581876625991338, guid: 2aac98dde298cfe4a97fc386aa16a11a, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5352213279870436451, guid: 2aac98dde298cfe4a97fc386aa16a11a, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5352213279870436451, guid: 2aac98dde298cfe4a97fc386aa16a11a, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
