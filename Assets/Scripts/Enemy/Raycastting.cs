@@ -11,10 +11,10 @@ public class Raycastting : MonoBehaviour
     void Update()
     {
         // Ray'i oluþtur
-        RaycastHit2D hit = Physics2D.Raycast(rayOrigin.position, -transform.forward, rayLength);
+        RaycastHit2D hit = Physics2D.Raycast(rayOrigin.position, rayDirection, rayLength);
 
         // Ray'i çiz (her zaman kýrmýzý)
-        Debug.DrawRay(rayOrigin.position, -transform.forward * rayLength, Color.red); //Ray'i görmek için Opsiyonel
+        Debug.DrawRay(rayOrigin.position, rayDirection * rayLength, Color.red); //Ray'i görmek için Opsiyonel
 
         // Bir þeye çarptýysa log yazdýr
         if (hit.collider != null && !hit.collider.CompareTag("Bullet"))
