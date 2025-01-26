@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class UIManager : MonoSingleton<UIManager>
 {
     public GameObject DeadPanel;
+    public GameObject LoadingScreen;
     public Slider HealthBar;
     public TMP_Text SoapText;
     public TMP_Text WaterText;
@@ -28,6 +29,7 @@ public class UIManager : MonoSingleton<UIManager>
     public void RestartScene()
     {
         LevelManager.Instance.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        Time.timeScale = 1;
     }
     public void QuitGame()
     {

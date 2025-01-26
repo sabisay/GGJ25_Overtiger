@@ -7,6 +7,11 @@ public class LevelManager : MonoSingleton<LevelManager>
 {
     public GameObject LoadingScreen;
     public Slider LoadingBar;
+
+    private void Start()
+    {
+        LoadingScreen = UIManager.Instance.LoadingScreen;
+    }
     public void LoadScene(int levelIndex)
     {
         SaveLoadManager.Instance.LoadGame();
