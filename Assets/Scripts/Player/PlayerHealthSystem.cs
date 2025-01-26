@@ -32,7 +32,7 @@ public class PlayerHealthSystem : MonoSingleton<PlayerHealthSystem>
         }
         if (Health <= 0)
         {
-
+            deathMusic.Play();
             StartCoroutine(Dead());
         }
         UIManager.Instance.RefreshUI(Health, Soap, Water, GunScript.Bullet);
@@ -69,7 +69,7 @@ public class PlayerHealthSystem : MonoSingleton<PlayerHealthSystem>
         yield return new WaitForSeconds(0.1f);
         UIManager.Instance.OpenDeadScreen();
 
-        deathMusic.Play();
+        
         
         Time.timeScale = 0.0f;
     }

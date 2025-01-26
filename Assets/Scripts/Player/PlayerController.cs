@@ -4,7 +4,7 @@ using UnityEngine.UIElements;
 
 public class PlayerController : MonoBehaviour
 {
-    //public AudioSource mousemusic;
+    //public AudioSource mousesound;
 
     public Rigidbody2D rb;
     public float MoveSpeed;
@@ -66,7 +66,7 @@ public class PlayerController : MonoBehaviour
 
         if (flybool == 0)
         {
-            //mousemusic.Play();
+            
 
             // Debug.Log("uçuyorsun melih");
             rb.linearVelocityY += FlyingSpeed / 10;
@@ -74,6 +74,8 @@ public class PlayerController : MonoBehaviour
         }
         else
         {
+            //mousesound.Play();
+
             PlayerHeadPivot.localScale =
                     Vector3.Lerp(
                         PlayerHeadPivot.localScale,

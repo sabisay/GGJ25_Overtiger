@@ -14113,6 +14113,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 5284778336014665531, guid: 583081e4df922fe44b7c5d3b0abd3142, type: 3}
+      propertyPath: mousesound
+      value: 
+      objectReference: {fileID: 2129854317}
     - target: {fileID: 5716270419568423107, guid: 583081e4df922fe44b7c5d3b0abd3142, type: 3}
       propertyPath: m_Name
       value: PlayerAndCamera
