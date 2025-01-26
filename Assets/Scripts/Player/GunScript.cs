@@ -47,6 +47,16 @@ public class GunScript : MonoBehaviour
         
         aimDirection = (mousePosition - transform.position).normalized;
         float angle = Mathf.Atan2(aimDirection.y, aimDirection.x) * Mathf.Rad2Deg;
-        aimTransform.eulerAngles = new Vector3 (0, 0, angle);
+        if(angle < 60 && angle > -30)
+        {
+            aimTransform.eulerAngles = new Vector3(0, 0, angle);
+            transform.rotation = Quaternion.Euler(transform.rotation.eulerAngles.x, 0, transform.rotation.eulerAngles.z);
+        }
+
+        else if(angle<180 && angle>120)
+        {
+            aimTransform.eulerAngles = new Vector3(0, 0, angle);
+            transform.rotation = Quaternion.Euler(transform.rotation.eulerAngles.x, 180, transform.rotation.eulerAngles.z);
+        }
     }
 }
