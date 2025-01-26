@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -14,13 +15,13 @@ public class CanvasManager : MonoBehaviour
 
     private void Start()
     {
-        Time.timeScale = 0;
         // Oyun baþladýðýnda Start Canvas'ýný aktif, Game Canvas'ýný pasif yap
-        startCanvas.SetActive(true);
+        //startCanvas.SetActive(true);
         GamePanel.SetActive(false);
 
         // Ses butonuna týklama olayýný ekle
         soundButton.onClick.AddListener(ToggleSound);
+        Time.timeScale = 0;
     }
 
     public void ShowStartCanvas()
@@ -59,5 +60,9 @@ public class CanvasManager : MonoBehaviour
 
         // Butonun sprite'ýný güncelle
         soundButton.image.sprite = isSoundOn ? soundOnSprite : soundOffSprite;
+    }
+    private IEnumerator CloseAfterDelay()
+    {
+        yield return new WaitForSeconds(2);
     }
 }
