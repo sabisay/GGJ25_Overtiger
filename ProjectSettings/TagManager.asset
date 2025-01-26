@@ -10,6 +10,7 @@ TagManager:
   - su
   - Player1
   - Deadzone
+  - Enemy
   layers:
   - Default
   - TransparentFX

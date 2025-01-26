@@ -29,6 +29,9 @@ public class PlayerController : MonoBehaviour
     {
         if (rb == null)
             rb = GetComponent<Rigidbody2D>();
+
+        SaveLoadManager.Instance.LoadGame();
+        PlayerHealthSystem.Instance.RefreshUIforBullet();
     }
 
     void Update()

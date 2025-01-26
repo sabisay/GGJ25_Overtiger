@@ -7,6 +7,7 @@ public class NextLevel : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
+            SaveLoadManager.Instance.SaveGame();
             if (SceneManager.GetActiveScene().buildIndex != 4)
                 LevelManager.Instance.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }

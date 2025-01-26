@@ -8,6 +8,7 @@ public class UIManager : MonoSingleton<UIManager>
     public GameObject DeadPanel;
     public GameObject LoadingScreen;
     public Slider HealthBar;
+    public Slider LoadingBar;
     public TMP_Text SoapText;
     public TMP_Text WaterText;
     public TMP_Text BulletText;
@@ -28,6 +29,7 @@ public class UIManager : MonoSingleton<UIManager>
 
     public void RestartScene()
     {
+        SaveLoadManager.Instance.LoadGame();
         LevelManager.Instance.LoadScene(SceneManager.GetActiveScene().buildIndex);
         Time.timeScale = 1;
     }
