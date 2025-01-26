@@ -920,15 +920,19 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 284867463850555090, guid: 2aac98dde298cfe4a97fc386aa16a11a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1491277290190836250, guid: 2aac98dde298cfe4a97fc386aa16a11a, type: 3}
       propertyPath: m_Name
       value: InGameUI
       objectReference: {fileID: 0}
-    - target: {fileID: 3660581876625991338, guid: 2aac98dde298cfe4a97fc386aa16a11a, type: 3}
+    - target: {fileID: 5352213279870436451, guid: 2aac98dde298cfe4a97fc386aa16a11a, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3660581876625991338, guid: 2aac98dde298cfe4a97fc386aa16a11a, type: 3}
+    - target: {fileID: 5352213279870436451, guid: 2aac98dde298cfe4a97fc386aa16a11a, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
