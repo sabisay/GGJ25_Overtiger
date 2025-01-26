@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 971f4392f80517944aa9e571763800de
+guid: 5be52143f8de4374b956d2a40b96a5f6
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5290920462389751472
-    second: 704a0eda-4c13-4a3c-9108-bccc41c01ac6_0
+      213: -1919230955667899903
+    second: "y\xFCz_0"
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -139,13 +139,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: 704a0eda-4c13-4a3c-9108-bccc41c01ac6_0
+      name: "y\xFCz_0"
       rect:
         serializedVersion: 2
-        x: 457
-        y: 425
-        width: 973
-        height: 780
+        x: 0
+        y: 0
+        width: 770
+        height: 820
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -154,30 +154,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 051d9683fdfd296b0800000000000000
-      internalID: -5290920462389751472
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: 704a0eda-4c13-4a3c-9108-bccc41c01ac6_1
-      rect:
-        serializedVersion: 2
-        x: 1432
-        y: 416
-        width: 1128
-        height: 775
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 86, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 52de5c7081ecbb8488a03a58b7d2aa66
-      internalID: 1031230386
+      spriteID: 10a3b754d958d55e0800000000000000
+      internalID: -1919230955667899903
       vertices: []
       indices: 
       edges: []
@@ -186,7 +164,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: f9bb256ed0c895447b70c1fbcdc8e431
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -196,10 +174,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      704a0eda-4c13-4a3c-9108-bccc41c01ac6_0: -5290920462389751472
-      704a0eda-4c13-4a3c-9108-bccc41c01ac6_1: 1031230386
-      704a0eda-4c13-4a3c-9108-bccc41c01ac6_2: 1992499896
-      704a0eda-4c13-4a3c-9108-bccc41c01ac6_3: -884020506
+      "y\xFCz_0": -1919230955667899903
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
