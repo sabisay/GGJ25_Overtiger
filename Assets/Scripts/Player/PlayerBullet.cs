@@ -3,6 +3,8 @@ using UnityEngine;
 
 public class PlayerBullet : MonoSingleton<PlayerBullet>
 {
+
+
     public float speed = 15f;
     private Vector3 _movement;
 

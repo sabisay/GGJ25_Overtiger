@@ -3,6 +3,8 @@ using UnityEngine;
 
 public class EnemyShooter : MonoBehaviour
 {
+    //public AudioSource shootmusic;
+
     public Bullet bullet;
 
     private Raycastting _raycasting;
@@ -27,6 +29,8 @@ public class EnemyShooter : MonoBehaviour
 
     void Shoot()
     {
+        //shootmusic.Play();
+
         Vector3 direction = _raycasting.HittedObject.transform.position - _rayOriginTransform.position;
         bullet.SetDirection(direction);
         bullet.gameObject.SetActive(true);

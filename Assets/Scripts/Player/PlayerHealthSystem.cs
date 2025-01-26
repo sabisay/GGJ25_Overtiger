@@ -3,6 +3,8 @@ using UnityEngine;
 
 public class PlayerHealthSystem : MonoSingleton<PlayerHealthSystem>
 {
+    public AudioSource deathMusic;
+
     public int Health = 100;
     public int Soap = 0;
     public int Water = 0;
@@ -25,6 +27,7 @@ public class PlayerHealthSystem : MonoSingleton<PlayerHealthSystem>
         }
         if (Health <= 0)
         {
+
             StartCoroutine(Dead());
         }
         UIManager.Instance.RefreshUI(Health, Soap, Water, GunScript.Bullet);
@@ -60,6 +63,9 @@ public class PlayerHealthSystem : MonoSingleton<PlayerHealthSystem>
         //playerController.animator
         yield return new WaitForSeconds(0.1f);
         UIManager.Instance.OpenDeadScreen();
+
+        deathMusic.Play();
+        
         Time.timeScale = 0.0f;
     }
 }
