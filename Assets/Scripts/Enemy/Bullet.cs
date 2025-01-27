@@ -14,6 +14,11 @@ public class Bullet : MonoBehaviour
         StartCoroutine(BulletDeactivated(waitSeconds));
     }
 
+    public void SetInitialPosition(Transform _transform)
+    {
+        initialPos = _transform;
+    }
+
     public void SetDirection(Vector3 direction)
     {
         _moveDirection = direction;

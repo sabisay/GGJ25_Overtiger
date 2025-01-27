@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 929963376372143655}
   - component: {fileID: 7746585198322979578}
   m_Layer: 5
-  m_Name: DeadScreen
+  m_Name: WinningScreen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -488,8 +488,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc85981a180e78f45a6065a48e3d4e6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DeadPanel: {fileID: 73174505059376662}
+  DeadPanel: {fileID: 284867463850555090}
   LoadingScreen: {fileID: 7854651220852498402}
+  WinningScreen: {fileID: 73174505059376662}
   HealthBar: {fileID: 7386368044219181735}
   LoadingBar: {fileID: 22145122492143182}
   SoapText: {fileID: 4332386808684391284}
@@ -709,10 +710,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: KAPAT
+  m_text: "OYUNDAN \xC7IK"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 717e7bf8c5e77444592e074efd096a15, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: -5553091862973663379, guid: 717e7bf8c5e77444592e074efd096a15, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -777,7 +778,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 1
+  m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &2793801506694272506
@@ -1959,10 +1960,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: KAPAT
+  m_text: "OYUNDAN \xC7IK"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 717e7bf8c5e77444592e074efd096a15, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: -5553091862973663379, guid: 717e7bf8c5e77444592e074efd096a15, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2027,7 +2028,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 1
+  m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &5875616655348413792
@@ -2095,10 +2096,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "GG KANKA \xD6LD\xDCN"
+  m_text: "KAYBETT\u0130N"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 717e7bf8c5e77444592e074efd096a15, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: -5553091862973663379, guid: 717e7bf8c5e77444592e074efd096a15, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2163,7 +2164,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0.95074457, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 1
+  m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &5952752509858211222
@@ -2306,10 +2307,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Tekrar rezil olmak istiyorum
+  m_text: "AYNI SAHNEY\u0130 TEKRAR OYNA"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 717e7bf8c5e77444592e074efd096a15, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: -5553091862973663379, guid: 717e7bf8c5e77444592e074efd096a15, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2333,7 +2334,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 13.2
+  m_fontSize: 16.4
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -2374,7 +2375,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 1
+  m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &6560699770858409427
@@ -2896,10 +2897,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Tekrar rezil olmak istiyorum
+  m_text: TEKRAR OYNA
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 717e7bf8c5e77444592e074efd096a15, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: -5553091862973663379, guid: 717e7bf8c5e77444592e074efd096a15, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2923,7 +2924,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 13.2
+  m_fontSize: 23
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -2964,7 +2965,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 1
+  m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &7756664000433405554
@@ -3032,10 +3033,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "GG KANKA \xD6LD\xDCN"
+  m_text: KAZANDIN
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 717e7bf8c5e77444592e074efd096a15, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: -5553091862973663379, guid: 717e7bf8c5e77444592e074efd096a15, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3100,7 +3101,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0.95074457, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
-  m_hasFontAssetChanged: 1
+  m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &7854651220852498402

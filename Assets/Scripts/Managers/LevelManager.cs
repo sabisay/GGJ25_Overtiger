@@ -10,8 +10,10 @@ public class LevelManager : MonoSingleton<LevelManager>
 
     private void Start()
     {
-        LoadingScreen = UIManager.Instance.LoadingScreen;
-        LoadingBar = UIManager.Instance.LoadingBar;
+        if (LoadingScreen == null)
+            LoadingScreen = UIManager.Instance.LoadingScreen;
+        if (LoadingBar == null)
+            LoadingBar = UIManager.Instance.LoadingBar;
     }
     public void LoadScene(int levelIndex)
     {

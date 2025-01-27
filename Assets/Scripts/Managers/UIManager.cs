@@ -7,6 +7,7 @@ public class UIManager : MonoSingleton<UIManager>
 {
     public GameObject DeadPanel;
     public GameObject LoadingScreen;
+    public GameObject WinningScreen;
     public Slider HealthBar;
     public Slider LoadingBar;
     public TMP_Text SoapText;
