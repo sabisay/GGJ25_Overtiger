@@ -14,6 +14,8 @@ public class CanvasManager : MonoBehaviour
     public Sprite soundOnSprite; // Ses açýk olduðunda gösterilecek sprite
     public Sprite soundOffSprite; // Ses kapalý olduðunda gösterilecek sprite
 
+    public bool isGamePaused;
+
     private bool isSoundOn = true; // Sesin açýk olup olmadýðýný tutan deðiþken
 
     private void Start()
@@ -49,8 +51,23 @@ public class CanvasManager : MonoBehaviour
 
     public void ToggleSettingsPanel(GameObject settingsPanel)
     {
+        if (!settingsPanel.activeSelf)
+        {
+            isGamePaused = true;
+        }
+        else
+        {
+            isGamePaused = false;
+        }
         // Settings panelini açýp kapatmak için
-        settingsPanel.SetActive(!settingsPanel.activeSelf);
+        bool isSettingsActive = !settingsPanel.activeSelf;
+        settingsPanel.SetActive(isSettingsActive);
+
+        // Oyunu durdur veya devam ettir
+        Time.timeScale = isSettingsActive ? 0 : 1;
+
+        // GamePanel'i açýp kapatmak için
+        GamePanel.SetActive(!isSettingsActive);
     }
 
     public void ToggleSound()

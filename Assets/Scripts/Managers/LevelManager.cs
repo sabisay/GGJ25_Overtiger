@@ -23,8 +23,8 @@ public class LevelManager : MonoSingleton<LevelManager>
     IEnumerator LoadSceneAsync(int levelIndex)
     {
         AsyncOperation operation = SceneManager.LoadSceneAsync(levelIndex);
-
-        LoadingScreen.SetActive(true);
+        if(LoadingScreen != null)
+            LoadingScreen.SetActive(true);
 
         while (!operation.isDone)
         {
