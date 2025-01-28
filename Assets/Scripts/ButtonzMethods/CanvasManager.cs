@@ -1,11 +1,14 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class CanvasManager : MonoBehaviour
 {
     public GameObject startCanvas; // Start Canvas'ýný buraya sürükleyip býrakýn
+    public GameObject StoryPanel;
     public GameObject GamePanel;
+    public GameObject MenuPanel;
 
     public Button soundButton; // Ses butonunu buraya sürükleyip býrakýn
     public Sprite soundOnSprite; // Ses açýk olduðunda gösterilecek sprite
@@ -15,12 +18,13 @@ public class CanvasManager : MonoBehaviour
 
     private void Start()
     {
-        // Oyun baþladýðýnda Start Canvas'ýný aktif, Game Canvas'ýný pasif yap
-        //startCanvas.SetActive(true);
-        GamePanel.SetActive(false);
-
-        // Ses butonuna týklama olayýný ekle
-        soundButton.onClick.AddListener(ToggleSound);
+        if(SceneManager.GetActiveScene().buildIndex == 0)
+            MenuPanel.SetActive(true);
+        else
+            MenuPanel.SetActive(false);
+        if (StoryPanel != null)
+            StoryPanel.SetActive(false);
+            
     }
 
     public void ShowStartCanvas()
@@ -29,9 +33,16 @@ public class CanvasManager : MonoBehaviour
         GamePanel.SetActive(false);
     }
 
+    public void ShowStoryCanvas()
+    {
+        MenuPanel.SetActive(false);
+        StoryPanel.SetActive(true);
+    }
+
     public void ShowGameCanvas()
     {
         startCanvas.SetActive(false);
+        StoryPanel.SetActive(false);
         GamePanel.SetActive(true);
         PlayerController.Instance.enabled = true;
     }
