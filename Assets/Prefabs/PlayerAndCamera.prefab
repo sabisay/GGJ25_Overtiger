@@ -401,12 +401,13 @@ MonoBehaviour:
   MoveSpeed: 0.2
   PlayerHeadPivot: {fileID: 7844601217870897394}
   GroundCheck: {fileID: 177683937354611530}
-  FlyingSpeed: 3
-  FlyingBaloon: 0.03
+  FlyingSpeed: 2.5
+  FlyingBaloon: 0.008
   distance: 1.4
   move: {fileID: 7380858043057047578, guid: c87899cc971caa24db43482014a37977, type: 3}
   fly: {fileID: -851439947973314159, guid: c87899cc971caa24db43482014a37977, type: 3}
   animator: {fileID: 3512863344979973121}
+  GameManagerPrefab: {fileID: 0}
 --- !u!114 &2891035393504266591
 MonoBehaviour:
   m_ObjectHideFlags: 0

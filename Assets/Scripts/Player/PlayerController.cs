@@ -24,16 +24,21 @@ public class PlayerController : MonoSingleton<PlayerController>
     public InputActionReference fly;
 
     public Animator animator;
+    public GameObject GameManagerPrefab;
 
 
 
     private void Start()
     {
+        if (GameManager.Instance == null && GameManagerPrefab != null)
+        {
+            Instantiate(GameManagerPrefab);
+        }
         if (rb == null)
             rb = GetComponent<Rigidbody2D>();
 
-        SaveLoadManager.Instance.LoadGame();
-        PlayerHealthSystem.Instance.RefreshUIforBullet();
+        SaveLoadManager.Instance?.LoadGame();
+        PlayerHealthSystem.Instance?.RefreshUIforBullet();
     }
 
     void Update()
