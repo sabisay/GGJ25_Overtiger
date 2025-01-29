@@ -13112,6 +13112,7 @@ MonoBehaviour:
   StoryPanel: {fileID: 963780340}
   GamePanel: {fileID: 1690713876}
   MenuPanel: {fileID: 963780342}
+  CreditsPanel: {fileID: 1203498857}
   soundButton: {fileID: 963780341}
   soundOnSprite: {fileID: -4468162648840057320, guid: 5a1968470e005a64eb7466d31395e5c4, type: 3}
   soundOffSprite: {fileID: 537902714911618142, guid: 5a1968470e005a64eb7466d31395e5c4, type: 3}
@@ -13419,10 +13420,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1250571554296093717, guid: f5644f496d7d45a4485140ea2b452ce9, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
+    - target: {fileID: 1552433710792164388, guid: f5644f496d7d45a4485140ea2b452ce9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 869492230}
     - target: {fileID: 4547495056311695684, guid: f5644f496d7d45a4485140ea2b452ce9, type: 3}
       propertyPath: m_Name
       value: StartCanvas
@@ -13431,18 +13432,14 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 869492230}
-    - target: {fileID: 5450559738849857506, guid: f5644f496d7d45a4485140ea2b452ce9, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ToggleSound
-      objectReference: {fileID: 0}
-    - target: {fileID: 6555658244303810167, guid: f5644f496d7d45a4485140ea2b452ce9, type: 3}
+    - target: {fileID: 5993504564249372275, guid: f5644f496d7d45a4485140ea2b452ce9, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 869492230}
     - target: {fileID: 6555658244303810167, guid: f5644f496d7d45a4485140ea2b452ce9, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ToggleSettingsPanel
-      objectReference: {fileID: 0}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 869492230}
     - target: {fileID: 8181173975206797364, guid: f5644f496d7d45a4485140ea2b452ce9, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -13668,6 +13665,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1203498857 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8160339174794893448, guid: f5644f496d7d45a4485140ea2b452ce9, type: 3}
+  m_PrefabInstance: {fileID: 963780338}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1260164939 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2933645943734943784, guid: 485a819efea568f46b6487d2267be34f, type: 3}

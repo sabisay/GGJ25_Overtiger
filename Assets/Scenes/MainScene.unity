@@ -239,9 +239,11 @@ MonoBehaviour:
   StoryPanel: {fileID: 4839518826314351182}
   GamePanel: {fileID: 0}
   MenuPanel: {fileID: 1353167189}
+  CreditsPanel: {fileID: 4839518826314351184}
   soundButton: {fileID: 1565225977}
   soundOnSprite: {fileID: -4468162648840057320, guid: 5a1968470e005a64eb7466d31395e5c4, type: 3}
   soundOffSprite: {fileID: 537902714911618142, guid: 5a1968470e005a64eb7466d31395e5c4, type: 3}
+  isGamePaused: 0
 --- !u!4 &1069449471
 Transform:
   m_ObjectHideFlags: 0
@@ -626,6 +628,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1552433710792164388, guid: f5644f496d7d45a4485140ea2b452ce9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1069449470}
+    - target: {fileID: 1552433710792164388, guid: f5644f496d7d45a4485140ea2b452ce9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ShowCreditsPanel
+      objectReference: {fileID: 0}
     - target: {fileID: 3364232551285733563, guid: f5644f496d7d45a4485140ea2b452ce9, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -642,10 +652,22 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1069449470}
+    - target: {fileID: 5993504564249372275, guid: f5644f496d7d45a4485140ea2b452ce9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1069449470}
+    - target: {fileID: 5993504564249372275, guid: f5644f496d7d45a4485140ea2b452ce9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ShowCreditsPanel
+      objectReference: {fileID: 0}
     - target: {fileID: 6555658244303810167, guid: f5644f496d7d45a4485140ea2b452ce9, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1069449470}
+    - target: {fileID: 8160339174794893448, guid: f5644f496d7d45a4485140ea2b452ce9, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8181173975206797364, guid: f5644f496d7d45a4485140ea2b452ce9, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -739,6 +761,11 @@ GameObject:
 --- !u!1 &4839518826314351183 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4547495056311695684, guid: f5644f496d7d45a4485140ea2b452ce9, type: 3}
+  m_PrefabInstance: {fileID: 4839518826314351181}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &4839518826314351184 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8160339174794893448, guid: f5644f496d7d45a4485140ea2b452ce9, type: 3}
   m_PrefabInstance: {fileID: 4839518826314351181}
   m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807

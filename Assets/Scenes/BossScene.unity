@@ -299,6 +299,34 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: ToggleSound
       objectReference: {fileID: 0}
+    - target: {fileID: 5993504564249372275, guid: f5644f496d7d45a4485140ea2b452ce9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5993504564249372275, guid: f5644f496d7d45a4485140ea2b452ce9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5993504564249372275, guid: f5644f496d7d45a4485140ea2b452ce9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1128856843}
+    - target: {fileID: 5993504564249372275, guid: f5644f496d7d45a4485140ea2b452ce9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5993504564249372275, guid: f5644f496d7d45a4485140ea2b452ce9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ShowCreditsPanel
+      objectReference: {fileID: 0}
+    - target: {fileID: 5993504564249372275, guid: f5644f496d7d45a4485140ea2b452ce9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: CanvasManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5993504564249372275, guid: f5644f496d7d45a4485140ea2b452ce9, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 6555658244303810167, guid: f5644f496d7d45a4485140ea2b452ce9, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -416,6 +444,11 @@ GameObject:
 --- !u!1 &180825197 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4547495056311695684, guid: f5644f496d7d45a4485140ea2b452ce9, type: 3}
+  m_PrefabInstance: {fileID: 180825193}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &180825198 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8160339174794893448, guid: f5644f496d7d45a4485140ea2b452ce9, type: 3}
   m_PrefabInstance: {fileID: 180825193}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &181412263
@@ -1124,6 +1157,7 @@ MonoBehaviour:
   StoryPanel: {fileID: 180825196}
   GamePanel: {fileID: 249792813}
   MenuPanel: {fileID: 180825195}
+  CreditsPanel: {fileID: 180825198}
   soundButton: {fileID: 180825194}
   soundOnSprite: {fileID: -4468162648840057320, guid: 5a1968470e005a64eb7466d31395e5c4, type: 3}
   soundOffSprite: {fileID: 537902714911618142, guid: 5a1968470e005a64eb7466d31395e5c4, type: 3}

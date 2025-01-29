@@ -9,6 +9,7 @@ public class CanvasManager : MonoBehaviour
     public GameObject StoryPanel;
     public GameObject GamePanel;
     public GameObject MenuPanel;
+    public GameObject CreditsPanel;
 
     public Button soundButton; // Ses butonunu buraya sürükleyip býrakýn
     public Sprite soundOnSprite; // Ses açýk olduðunda gösterilecek sprite
@@ -20,7 +21,8 @@ public class CanvasManager : MonoBehaviour
 
     private void Start()
     {
-        if(SceneManager.GetActiveScene().buildIndex == 0)
+        CreditsPanel.SetActive(false);
+        if (SceneManager.GetActiveScene().buildIndex == 0)
             MenuPanel.SetActive(true);
         else
             MenuPanel.SetActive(false);
@@ -33,12 +35,14 @@ public class CanvasManager : MonoBehaviour
     {
         startCanvas.SetActive(true);
         GamePanel.SetActive(false);
+        CreditsPanel.SetActive(false);
     }
 
     public void ShowStoryCanvas()
     {
         MenuPanel.SetActive(false);
         StoryPanel.SetActive(true);
+        CreditsPanel.SetActive(false);
     }
 
     public void ShowGameCanvas()
@@ -46,9 +50,15 @@ public class CanvasManager : MonoBehaviour
         startCanvas.SetActive(false);
         StoryPanel.SetActive(false);
         GamePanel.SetActive(true);
+        CreditsPanel.SetActive(false);
         PlayerController.Instance.enabled = true;
     }
 
+    public void ShowCreditsPanel()
+    {
+        CreditsPanel.SetActive(!CreditsPanel.activeSelf);
+
+    }
     public void ToggleSettingsPanel(GameObject settingsPanel)
     {
         if (!settingsPanel.activeSelf)
@@ -66,8 +76,8 @@ public class CanvasManager : MonoBehaviour
         // Oyunu durdur veya devam ettir
         Time.timeScale = isSettingsActive ? 0 : 1;
 
-        // GamePanel'i açýp kapatmak için
-        GamePanel.SetActive(!isSettingsActive);
+        if(GamePanel != null)
+            GamePanel.SetActive(!isSettingsActive);
     }
 
     public void ToggleSound()

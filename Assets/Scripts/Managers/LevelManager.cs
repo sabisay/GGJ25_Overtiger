@@ -29,8 +29,8 @@ public class LevelManager : MonoSingleton<LevelManager>
         while (!operation.isDone)
         {
             float progressValue = Mathf.Clamp01(operation.progress / 0.9f);
-
-            LoadingBar.value = progressValue;
+            if(LoadingBar != null)
+                LoadingBar.value = progressValue;
             yield return null;
         }
     }
