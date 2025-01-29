@@ -20,7 +20,7 @@ public class BossHealthSystem : MonoSingleton<BossHealthSystem>
         {
             DecreaseHealth(20);
             Debug.Log(Health);
-            Destroy(gameObject);
+            collision.gameObject.SetActive(false);
         }
     }
 }
