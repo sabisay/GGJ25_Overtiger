@@ -1924,7 +1924,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "- Lale Nur Akta\u015F (2D Artist, Designer)\n\n- Furkan Yusuf \xC7akmak
-    (Game Dev., Sound Designer)\n\n- Talha \xD6zt\xFCrk (Main Game Dev., Product
+    (Game Dev., Sound Designer)\n\n- Talha \xD6zt\xFCrk (Lead Game Dev., Product
     Owner)\n\n- Sabriye Nur \u015Eent\xFCrk (Project Manager, Game dev.)"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91, type: 2}
@@ -3260,7 +3260,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &8458509883952340194
 RectTransform:
   m_ObjectHideFlags: 0

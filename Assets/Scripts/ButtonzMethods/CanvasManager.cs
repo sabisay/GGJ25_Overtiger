@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
@@ -61,23 +62,17 @@ public class CanvasManager : MonoBehaviour
     }
     public void ToggleSettingsPanel(GameObject settingsPanel)
     {
-        if (!settingsPanel.activeSelf)
-        {
-            isGamePaused = true;
-        }
-        else
-        {
-            isGamePaused = false;
-        }
-        // Settings panelini açýp kapatmak için
-        bool isSettingsActive = !settingsPanel.activeSelf;
-        settingsPanel.SetActive(isSettingsActive);
+        bool newState = !settingsPanel.activeSelf; // Determine the new state
+        settingsPanel.SetActive(newState); // Toggle panel visibility
+        isGamePaused = newState; // Update game paused state
 
-        // Oyunu durdur veya devam ettir
-        Time.timeScale = isSettingsActive ? 0 : 1;
+        // Pause or resume the game
+        Time.timeScale = isGamePaused ? 0 : 1;
 
-        if(GamePanel != null)
-            GamePanel.SetActive(!isSettingsActive);
+        EventSystem.current.SetSelectedGameObject(null);
+
+        if (GamePanel != null)
+            GamePanel.SetActive(!isGamePaused);
     }
 
     public void ToggleSound()

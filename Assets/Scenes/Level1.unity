@@ -13440,6 +13440,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 869492230}
+    - target: {fileID: 8160339174794893448, guid: f5644f496d7d45a4485140ea2b452ce9, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8181173975206797364, guid: f5644f496d7d45a4485140ea2b452ce9, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -13789,6 +13793,10 @@ PrefabInstance:
       propertyPath: canvasManager
       value: 
       objectReference: {fileID: 869492230}
+    - target: {fileID: 5284778336014665531, guid: 583081e4df922fe44b7c5d3b0abd3142, type: 3}
+      propertyPath: GameManagerPrefab
+      value: 
+      objectReference: {fileID: 7113385669516004351, guid: d17c95aec30c92343b42bda9e17147d8, type: 3}
     - target: {fileID: 5716270419568423107, guid: 583081e4df922fe44b7c5d3b0abd3142, type: 3}
       propertyPath: m_Name
       value: PlayerAndCamera
