@@ -13873,6 +13873,18 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 869492230}
     - target: {fileID: 5284778336014665531, guid: 583081e4df922fe44b7c5d3b0abd3142, type: 3}
+      propertyPath: distance
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5284778336014665531, guid: 583081e4df922fe44b7c5d3b0abd3142, type: 3}
+      propertyPath: MoveSpeed
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5284778336014665531, guid: 583081e4df922fe44b7c5d3b0abd3142, type: 3}
+      propertyPath: FlyingBaloon
+      value: 0.005
+      objectReference: {fileID: 0}
+    - target: {fileID: 5284778336014665531, guid: 583081e4df922fe44b7c5d3b0abd3142, type: 3}
       propertyPath: GameManagerPrefab
       value: 
       objectReference: {fileID: 7113385669516004351, guid: d17c95aec30c92343b42bda9e17147d8, type: 3}
